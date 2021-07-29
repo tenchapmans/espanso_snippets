@@ -22,6 +22,9 @@ Windows
 Open the Command Prompt and type the following command, making sure the paths are correct
 
 mklink /J "C:\Users\Freddy\AppData\Roaming\espanso" "C:\Users\Freddy\Dropbox\espanso"
+details - https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/mklink
+
+
 macOS and Linux
 Open the terminal and type:
 
