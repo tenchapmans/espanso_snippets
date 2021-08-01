@@ -28,6 +28,8 @@ details - https://docs.microsoft.com/en-us/windows-server/administration/windows
 macOS and Linux
 Open the terminal and type:
 
+ln -s /home/alan/code/espanso_snippets/ /home/alan/.config/espanso
+
 ln -s "/Users/user/Dropbox/espanso" "/Users/user/Library/Preferences/espanso"
 If you want to sync packages as well, you have to do another step, but I'll keep it for the official documentation.
 
