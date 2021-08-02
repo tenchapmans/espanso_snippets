@@ -1,7 +1,8 @@
 # **espanso_snippets**
-place to store the espanso yml files I use.   
 
-Some pulled from other git repos
+place to store the espanso yml files I use.
+
+Some pulled from other git repos:
 
 https://github.com/Lissy93/espanso-config
 
@@ -18,23 +19,25 @@ After stopping espanso, you can take that folder and move it to your dropbox fol
 C:\Users\Freddy\Dropbox\espanso
 At this point, you want to link that new location to the old one, and this can be done with various commands depending on the OS. In particular:
 
-**Windows**
+## **Windows**
+
 Open the Command Prompt and type the following command, making sure the paths are correct
 
+```
 `espanso stop`
-
-`mklink /J "C:\Users\acchapm1\AppData\Roaming\espanso" "D:\git\espanso"`
-
+mklink /J "C:\Users\acchapm1\AppData\Roaming\espanso" "D:\git\espanso"
 `espanso start`
+```
 
-<u>Example:</u>
-mklink /J C:\LinkToFolder C:\Users\Name\OriginalFolder
-mklink /J  [link] [source]  (put in quotes " " if there are spaces)
+**Example:**
+`mklink /J C:\LinkToFolder C:\Users\Name\OriginalFolder`
+`mklink /J  [link] [source]`  (put in quotes " " if there are spaces)
 
-**Linux**
+## **Linux**
+
 Open the terminal and type:
 
-`espanso stop` 
+`espanso stop`
 
 `git clone https://github.com/tenchapmans/espanso_snippets.git ~/code/espanso`
 
@@ -42,6 +45,6 @@ Open the terminal and type:
 
 `espanso start`
 
-<u>Example:</u>
+**Example:**
 ln -s "/Users/user/Dropbox/espanso" "/Users/user/Library/Preferences/espanso"
 If you want to sync packages as well, you have to do another step, but I'll keep it for the official documentation

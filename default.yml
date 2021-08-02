@@ -9,6 +9,10 @@
 
 enable_passive: true
 passive_key: CTRL
+# options for toggle_key: CTRL, ALT, SHIFT, META, LEFT_CTRL, LEFT_ALT, LEFT_SHIFT, 
+#                         LEFT_META, RIGHT_CTRL, RIGHT_ALT, RIGHT_SHIFT, RIGHT_META, OFF
+toggle_key: RIGHT_ALT
+
 
 matches:
   # Simple text replacement
