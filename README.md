@@ -34,9 +34,12 @@ mklink /J  [link] [source]  (put in quotes " " if there are spaces)
 **Linux**
 Open the terminal and type:
 
-`espanso stop`
+`espanso stop` 
+
 `git clone https://github.com/tenchapmans/espanso_snippets.git ~/code/espanso`
+
 `ln -s /home/alan/code/espanso/ /home/alan/.config/espanso`
+
 `espanso start`
 
 <u>Example:</u>
