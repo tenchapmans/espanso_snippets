@@ -128,7 +128,7 @@ matches:
 
 # adds git url from clip board to git clone
   - trigger: ":clone"
-    replace: "git clone {{clipboard}} $|$"
+    replace: "git clone {{Clipboard}} $|$"
     vars:
     - name: "clipboard"
       type: "clipboard"
