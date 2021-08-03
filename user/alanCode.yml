@@ -1,19 +1,13 @@
-
+# I found a lot of this on https://github.com/ekiel/espanso
 
 name: alanCode
 package-author: Alan Chapman
 parent: default
+backend: Clipboard # options are Inject or Clipboard on Win and mac, Auto is also an option in Linux
+
 matches:
 
-# Custom Replacements
 
-#:mdtag is used to quickly create a tag notation for Zettlekasten in code blocks.
-  - trigger: ":mdtag"
-    replace: "`#$|$`  "
-
-#:t is a short version of mdtag
-  - trigger: ":tag"
-    replace: "`#$|$`  "
 
 #fun stuff
   - trigger: ":dance"
@@ -129,6 +123,15 @@ matches:
 
   - trigger: ":m4"
     replace: "(¯`·._.·(¯`·._.·(¯`·._.· $|$ ·._.·´¯)·._.·´¯)·._.·´¯)"
+
+# git related
+
+# adds git url from clip board to git clone
+  - trigger: ":clone"
+    replace: "git clone {{clipboard}} $|$"
+    vars:
+    - name: "clipboard"
+      type: "clipboard"
 
 #new note template for your Zettlekasten
   - trigger: ":nn"
