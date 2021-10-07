@@ -22,7 +22,7 @@ matches:
     - name: output
       type: shell
       params:
-        cmd: "curl 'http://wttr.in/?format=3'"
+        cmd: "curl 'wttr.in/?format=4'"
         
 # Auto close brackets, quotes and formatting modifiers, and put cursor in center
 - trigger: ':('
