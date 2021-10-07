@@ -2,7 +2,7 @@
 # Licensed under MIT X11, © Alicia Sykes 2021: https://aliciasykes.com
 
 name: alicia-utils 
-package_author: Alicia Sykes <alicia@omg.lol>
+package_author: Alicia Sykes <alicia@omg.lol>, I have made some changes to a few things here, mostly used as I found it. 
 parent: default
 matches:
 
