@@ -7,8 +7,6 @@ backend: Clipboard # options are Inject or Clipboard on Win and mac, Auto is als
 
 matches:
 
-
-
 #fun stuff
   - trigger: ":dance"
     replace: "`ᕕ(⌐■_■)ᕗ ♪♬`"
