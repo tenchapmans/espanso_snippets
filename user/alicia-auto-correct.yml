@@ -890,4 +890,21 @@ matches:
   replace: yogurt
   propagate_case: true
   word: true
-    
+
+# my corrections
+- trigger: tjm
+  replace: tjmath1
+  propagate_case: true
+  word: true  
+- trigger: jcm
+  replace: jcmontel
+  propagate_case: true
+  word: true
+- trigger: llu
+  replace: llullo1
+  propagate_case: true
+  word: true
+- trigger: pfr
+  replace: pfrew1
+  propagate_case: true
+  word: true

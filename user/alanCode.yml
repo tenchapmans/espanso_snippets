@@ -131,31 +131,6 @@ matches:
     - name: "clipboard"
       type: "clipboard"
 
-#new note template for your Zettlekasten
-  - trigger: ":nn"
-    replace: "# Title\n{{date}}\n## Tags\n\n## Links \n\n### ID\n{{id}}"
-    vars:
-      - name: date
-        type: match
-        params:
-          trigger: ":date"
-      - name: id
-        type: match
-        params:
-          trigger: ":id"
-
-  - trigger: ":nz"
-    replace: "---\nid: {{id}}\ntitle: $|$\ndate: {{date}}\ntags: []\nlinks: [[]]\n---\n"
-    vars:
-      - name: date
-        type: match
-        params:
-          trigger: ":date"
-      - name: id
-        type: match
-        params:
-          trigger: ":id"
-
 #time in 0H:0M notation
   - trigger: ":now"
     replace: "{{time}}  "
