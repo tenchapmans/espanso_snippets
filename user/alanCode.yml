@@ -152,3 +152,7 @@ matches:
 #cf creates a code fence - enclosed three `'s
   - trigger: ":cf"
     replace: "```\n$|$\n```"
+
+# cht.sh powershell
+#
+# - trigger: ":chtps"
