@@ -9,7 +9,7 @@
 
 enable_passive: true
 passive_key: CTRL
-# toggle_key: OFF
+toggle_key: OFF
 
 matches:
   # Simple text replacement
