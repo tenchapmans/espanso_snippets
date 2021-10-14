@@ -25,7 +25,7 @@ matches:
 # This is to save time writing the update commands
   - trigger: ":gp"
     replace: "git push"
-  - trigger: ":add"
+  - trigger: ":gadd"
     replace: "git add -A"
 # To push to a remote repo if you want to choose the branch
   - trigger: ":rpush"
