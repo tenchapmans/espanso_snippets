@@ -12,10 +12,6 @@ passive_key: CTRL
 toggle_key: OFF
 
 matches:
-  # Simple text replacement
-  - trigger: ":espanso"
-    replace: "Hi there!"
-
   # Dates
   - trigger: ":date"
     replace: "{{mydate}}"
@@ -33,3 +29,12 @@ matches:
         type: shell
         params:
           cmd: "echo Hello from your shell"
+  
+  - trigger: ":ip"
+    replace: "{{output}}" 
+    vars:    
+      - name: output
+        type: shell
+        params:
+          cmd: "curl 'https://api.ipify.org'"        
+          shell: wsl

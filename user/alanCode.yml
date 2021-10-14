@@ -5,7 +5,49 @@ package-author: Alan Chapman
 parent: default
 backend: Clipboard # options are Inject or Clipboard on Win and mac, Auto is also an option in Linux
 
+global_vars: 
+  - name: date_updated
+    type: date
+    params:
+      format: "%d-%m-%Y | %H:%M"
+  - name: id
+    type: dummy
+    params:
+      echo: "acchapm1"
+
 matches:
+
+# git related
+# from https://github.com/not-AMM/espanso-gitupdate
+# This is to name the commit as the time it was updated
+  - trigger: ":commit"
+    replace: "git commit -m \"Updated: {{date_updated}}\" "
+# This is to save time writing the update commands
+  - trigger: ":gp"
+    replace: "git push"
+  - trigger: ":add"
+    replace: "git add -A"
+# To push to a remote repo if you want to choose the branch
+  - trigger: ":rpush"
+    replace: "git push --set-upstream origin $|$"
+# To push to a remote repo if you have the branch's name in your clipboard
+  - trigger: ":rpushc"
+    replace: "git push --set-upstream origin git push --set-upstream origin {{clipboard}}"
+    force_clipboard: true
+    vars:
+      - name: clipboard
+        type: clipboard
+# adds git url from clip board to git clone
+  - trigger: ":clone"
+    replace: "git clone {{clipboard}} $|$"
+    force_clipboard: true
+    vars:
+    - name: clipboard
+      type: clipboard
+
+# agave related
+  - trigger: ":ssh"
+    replace: "ssh {{id}}@splinter.asu.edu -p 396"
 
 #fun stuff
   - trigger: ":dance"
@@ -122,15 +164,6 @@ matches:
   - trigger: ":m4"
     replace: "(¯`·._.·(¯`·._.·(¯`·._.· $|$ ·._.·´¯)·._.·´¯)·._.·´¯)"
 
-# git related
-
-# adds git url from clip board to git clone
-  - trigger: ":clone"
-    replace: "git clone {{Clipboard}} $|$"
-    vars:
-    - name: "clipboard"
-      type: "clipboard"
-
 #time in 0H:0M notation
   - trigger: ":now"
     replace: "{{time}}  "
@@ -141,7 +174,7 @@ matches:
           format: "%l:%M %p"
 
 #id creates a timestamp for unique ids in notes like Zettlr - handy for other apps that don't include that functionality
-  - trigger: ":id"
+  - trigger: ":timestamp"
     replace: "{{time}}  "
     vars:
       - name: time
