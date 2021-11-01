@@ -3,7 +3,7 @@
 name: alanCode
 package-author: Alan Chapman
 parent: default
-backend: Clipboard # options are Inject or Clipboard on Win and mac, Auto is also an option in Linux
+backend: Inject # options are Inject or Clipboard on Win and mac, Auto is also an option in Linux
 
 global_vars: 
   - name: date_updated
@@ -25,6 +25,7 @@ matches:
 # This is to save time writing the update commands
   - trigger: ":gp"
     replace: "git push"
+# git add all
   - trigger: ":gadd"
     replace: "git add -A"
 # To push to a remote repo if you want to choose the branch
@@ -38,7 +39,7 @@ matches:
       - name: clipboard
         type: clipboard
 # adds git url from clip board to git clone
-  - trigger: ":clone"
+  - trigger: ":cln"
     replace: "git clone {{clipboard}} $|$"
     force_clipboard: true
     vars:
@@ -47,7 +48,7 @@ matches:
 
 # agave related
   - trigger: ":ssh"
-    replace: "ssh {{id}}@splinter.asu.edu -p 396"
+    replace: "ssh {{id}}@splinter.asu.edu"
 
 #fun stuff
   - trigger: ":dance"
@@ -189,3 +190,7 @@ matches:
 # cht.sh powershell
 #
 # - trigger: ":chtps"
+
+# my tools
+  - trigger: ":markpanso"
+    replace: "python markpanso.py"

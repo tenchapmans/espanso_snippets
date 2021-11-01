@@ -10,6 +10,8 @@
 enable_passive: true
 passive_key: CTRL
 toggle_key: OFF
+backend: Inject
+show_notifications: false
 
 matches:
   # Dates
@@ -36,5 +38,5 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "curl 'https://api.ipify.org'"        
-          shell: wsl
+          cmd: "curl https://api.ipify.org"        
+          
