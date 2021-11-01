@@ -120,10 +120,6 @@ matches:
 - trigger: :best
   replace: "Best,\nAlan\n"
   
-# Outputs git commit command, with cursor in the message block
-- trigger: :commit
-  replace: git commit -m "$|$"
-  
 # Fetches a funny commit message from whatthecommit.com
 - trigger: :wtc
   replace: "{{output}}"
