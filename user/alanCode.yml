@@ -20,8 +20,13 @@ matches:
 # git related
 # from https://github.com/not-AMM/espanso-gitupdate
 # This is to name the commit as the time it was updated
-  - trigger: ":commit"
-    replace: "git commit -m \"Updated: {{date_updated}}\" "
+  - trigger: ":cmt"
+    replace: "git commit -m \"Updated: {{updated}} - $|$\" "
+    vars: 
+      - name: updated
+        type: date
+        params:
+          format: "%d-%m-%Y | %H:%M"
 # This is to save time writing the update commands
   - trigger: ":gp"
     replace: "git push"
