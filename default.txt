@@ -1,0 +1,5 @@
+| Trigger   | Replace    |
+|-----------|------------|
+| :date     | {{mydate}} |
+| :shell    | {{output}} |
+| :ip       | {{output}} |

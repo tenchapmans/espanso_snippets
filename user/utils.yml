@@ -167,7 +167,7 @@ matches:
 - triggers: [:srch-vt, :search-virustotal]
   replace: 'https://www.virustotal.com/gui/search/'
 - triggers: [:srch-amz, :search-amazon]
-  replace: 'https://amazon.co.uk/s?k='
+  replace: 'https://amazon.com/s?k='
 - triggers: [:srch-yt, :search-youtube]
   replace: 'https://youtube.com/results?q='
 - triggers: [:srch-maps, :search-maps]
@@ -191,9 +191,6 @@ matches:
 - trigger: ":swc-dh"
   replace: "https://hub.docker.com/search?q={{clipboard}}"
   vars: [{ name: "clipboard", type: "clipboard"}]
-- trigger: ":swc-wa"
-  replace: "https://www.wolframalpha.com/input/?i={{clipboard}}"
-  vars: [{ name: "clipboard", type: "clipboard"}]
 - trigger: ":swc-red"
   replace: "https://www.reddit.com/search/?q={{clipboard}}"
   vars: [{ name: "clipboard", type: "clipboard"}]
@@ -204,7 +201,7 @@ matches:
   replace: "https://www.virustotal.com/gui/search/{{clipboard}}"
   vars: [{ name: "clipboard", type: "clipboard"}]
 - trigger: ":swc-amz"
-  replace: "https://amazon.co.uk/s?k={{clipboard}}"
+  replace: "https://amazon.com/s?k={{clipboard}}"
   vars: [{ name: "clipboard", type: "clipboard"}]
 - trigger: ":swc-yt"
   replace: "https://youtube.com/results?q={{clipboard}}"

@@ -45,14 +45,14 @@ matches:
         type: clipboard
 # adds git url from clip board to git clone
   - trigger: ":cln"
-    replace: "git clone {{clipboard}} $|$"
+    replace: "git clone {{clipboard}}"
     force_clipboard: true
     vars:
     - name: clipboard
       type: clipboard
 
 # agave related
-  - trigger: ":ssh"
+  - trigger: ":agave"
     replace: "ssh {{id}}@splinter.asu.edu"
 
 #fun stuff
@@ -192,10 +192,3 @@ matches:
   - trigger: ":cf"
     replace: "```\n$|$\n```"
 
-# cht.sh powershell
-#
-# - trigger: ":chtps"
-
-# my tools
-  - trigger: ":markpanso"
-    replace: "python markpanso.py"
