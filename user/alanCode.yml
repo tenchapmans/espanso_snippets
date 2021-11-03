@@ -45,7 +45,7 @@ matches:
         type: clipboard
 # adds git url from clip board to git clone
   - trigger: ":cln"
-    replace: "git clone {{clipboard}}"
+    replace: "git clone {{clipboard}} --recurse"
     force_clipboard: true
     vars:
     - name: clipboard
