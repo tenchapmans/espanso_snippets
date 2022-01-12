@@ -53,7 +53,7 @@ matches:
 
 # agave related
   - trigger: ":agave"
-    replace: "ssh {{id}}@splinter.asu.edu"
+    replace: "ssh {{id}}@splinter.asu.edu -p 396"
 
 #fun stuff
   - trigger: ":dance"

@@ -184,5 +184,16 @@ matches:
   vars: [{ name: "clipboard", type: "clipboard"}]
   
   
-  
+# Search dropdown paste
+- trigger: :search
+  form: "{{search}}"
+  form_fields:
+    search:
+      type: choice
+      values:
+      - :swc-ddg
+      - :swc-gh
+      - :swc-goo
+      - :swc-yt
+      - :swc-red
   
