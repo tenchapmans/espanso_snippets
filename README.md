@@ -19,6 +19,18 @@ After stopping espanso, you can take that folder and move it to your dropbox fol
 C:\Users\Freddy\Dropbox\espanso
 At this point, you want to link that new location to the old one, and this can be done with various commands depending on the OS. In particular:
 
+## **Linux**
+
+Open the terminal and type:
+
+`espanso stop`
+
+`git clone https://github.com/tenchapmans/espanso_snippets.git ~/git/espanso`
+
+`ln -s ~/git/espanso/ ~/.config/espanso`
+
+`espanso start`
+
 ## **Windows**
 
 Open the Command Prompt and type the following command, making sure the paths are correct
@@ -33,19 +45,6 @@ mklink /J "C:\Users\acchapm1\AppData\Roaming\espanso" "D:\git\espanso"
 `mklink /J C:\LinkToFolder C:\Users\Name\OriginalFolder`
 `mklink /J  [link] [source]`  (put in quotes " " if there are spaces)
 
-## **Linux**
 
-Open the terminal and type:
 
-`espanso stop`
-
-`git clone https://github.com/tenchapmans/espanso_snippets.git ~/code/espanso`
-
-`ln -s /home/alan/code/espanso/ /home/alan/.config/espanso`
-
-`espanso start`
-
-**Example:**
-ln -s "/Users/user/Dropbox/espanso" "/Users/user/Library/Preferences/espanso"
-If you want to sync packages as well, you have to do another step, but I'll keep it for the official documentation
 
